@@ -1,0 +1,51 @@
+/* ==== Reset & Base ==== */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Poppins', sans-serif; background:#f4f9f4; color:#333; line-height:1.6; }
+
+/* ==== Layout ==== */
+.container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+header { text-align:center; margin-bottom:2rem; }
+header h1 { font-size:2.2rem; color:#2e7d32; }
+header p { color:#666; }
+
+/* ==== Upload Area ==== */
+.upload-area {
+    border: 3px dashed #81c784;
+    border-radius: 12px;
+    background:#e8f5e9;
+    padding: 2rem;
+    text-align:center;
+    cursor:pointer;
+    transition: background .2s, border-color .2s;
+}
+.upload-area.highlight { background:#c8e6c9; border-color:#4caf50; }
+.upload-area .icon { width:48px; height:48px; fill:#4caf50; margin-bottom:.5rem; }
+.upload-area .link { color:#1976d2; text-decoration:underline; }
+#preview { max-width:100%; max-height:300px; margin-top:1rem; border-radius:8px; }
+
+/* ==== Button ==== */
+button {
+    display:block; margin:1.5rem auto;
+    padding:.8rem 2rem; font-size:1rem; font-weight:600;
+    background:#4caf50; color:white; border:none; border-radius:8px;
+    cursor:pointer; transition:background .2s;
+}
+button:disabled { background:#a5d6a7; cursor:not-allowed; }
+button:hover:not(:disabled) { background:#388e3c; }
+
+/* ==== Result Cards ==== */
+#result { margin-top:2rem; animation: fadeIn .4s; }
+.info-card {
+    background:white; border-left:4px solid #4caf50;
+    padding:1rem; margin:1rem 0; border-radius:0 8px 8px 0;
+    box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.info-card h3 { color:#2e7d32; margin-bottom:.4rem; }
+.confidence { font-size:1.1rem; color:#2e7d32; }
+
+/* ==== Footer ==== */
+footer { text-align:center; margin-top:3rem; color:#777; font-size:.9rem; }
+
+/* ==== Misc ==== */
+.hidden { display:none; }
+@keyframes fadeIn { from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:none;} }
